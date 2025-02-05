@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    // Funcion constructora
+    function Tarea(titulo) {
+      this.titulo = titulo;
+    }
+
+    // Metodo render de la funcion constructora
+    Tarea.prototype.render = function () {
+      const div = document.createElement("div");
+      div.textContent = this.titulo;
+      return div;
+    };
+
+    // Funcion para renderizar el componente
+    const renderizarComponente = (componente, contenedor) => {
+      contenedor.appendChild(componente.render());
+    };
+
+    // Instanciar la tarea y renderizarla
+    const miTarea = new Tarea("Aprender JavaScript");
+    const contenedor = document.querySelector("div");
+
+    renderizarComponente(miTarea, contenedor);
+  </script>
+</html>
