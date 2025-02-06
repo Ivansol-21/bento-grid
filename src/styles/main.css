@@ -309,7 +309,7 @@ img {
     }
     body {
         font-size: clamp(0.875rem, 0.125rem + 1.5vw, 1.125rem);
-        padding: 1.7rem 1.5rem;
+        padding: 1.7rem 0.5rem;
     }
     .card-1 {
         align-items: start;
